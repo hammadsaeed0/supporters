@@ -322,3 +322,9 @@ export const createCustomCheckup = async (req, res, next) => {
     });
   }
 };
+
+// Create Custom Checkup
+export const test = async (req, res, next) => {
+  res.send("Hey")
+};
+

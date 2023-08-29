@@ -26,8 +26,8 @@ app.use(
 app.use(cors());
 
 // Import User Routes
-app.use("/api/v1/doctor", DoctorRoutes);
-app.use("/api/v1/patient", PaitentRoutes);
+app.use("/v1/doctor", DoctorRoutes);
+app.use("v1/patient", PaitentRoutes);
 
 app.listen(APP_PORT, () => {
   console.log(`app  on port ${APP_PORT}`);

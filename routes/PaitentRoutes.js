@@ -1,5 +1,5 @@
 import express from "express";
-import { LoginPatient, RegisterPatient, sendEmail, verifyOTP, showAllDoctors, getDoctorProfile, appointmentBook, showAllAppointments, showSingleAppointments, createCustomCheckup } from "../controller/PatientController.js";
+import { LoginPatient, RegisterPatient, sendEmail, verifyOTP, showAllDoctors, getDoctorProfile, appointmentBook, showAllAppointments, showSingleAppointments, createCustomCheckup, test } from "../controller/PatientController.js";
 
 const router = express.Router();
 
@@ -13,6 +13,7 @@ router.route("/appointmentBook").post(appointmentBook)
 router.route("/showAllAppointments/:id").post(showAllAppointments)
 router.route("/showSingleAppointments/:id").post(showSingleAppointments)
 router.route("/CustomCheckup").post(createCustomCheckup)
+router.route("/test").get(test)
 
 
 

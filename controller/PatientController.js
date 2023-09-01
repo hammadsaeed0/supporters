@@ -16,7 +16,7 @@ cloudinary.v2.config({
 
 // Register Patient
 export const RegisterPatient = catchAsyncError(async (req, res, next) => {
-  const { name, email, password, gender, address } = req.body;
+  const { name, email, password, gender } = req.body;
   // Check if user with the same email already exists
   const existingPatient = await Patient.findOne({ email });
   if (existingPatient) {
@@ -30,7 +30,6 @@ export const RegisterPatient = catchAsyncError(async (req, res, next) => {
     email,
     password: hashedPassword,
     gender,
-    address,
   });
 
   res.status(201).json({
@@ -321,10 +320,5 @@ export const createCustomCheckup = async (req, res, next) => {
       error: error.message,
     });
   }
-};
-
-// Create Custom Checkup
-export const test = async (req, res, next) => {
-  res.send("Hey")
 };
 
